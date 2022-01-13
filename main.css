@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
+/* Root Variables */
+:root {
+  /* Colors */
+  --col-primary-dark: hsl(233, 26%, 24%);
+  --col-primary-500: hsl(136, 65%, 51%);
+  --col-primary-300: hsl(192, 70%, 51%);
+
+  --col-neutral-text: hsl(233, 8%, 62%);
+  --col-neutral-bg-400: hsl(220, 16%, 96%);
+  --col-neutral-bg-200: hsl(0, 0%, 98%);
+  --col-neutral-light: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --ff-primary: "Public Sans", sans-serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  /* Images URL's */
+  --bg-img-desktop: url(./images/bg-intro-desktop.svg);
+  --bg-img-mobile: url(./images/bg-intro-mobile.svg);
+}
+
+/* CSS Reset */
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Utilities */
+.bg-dark {
+  background: var(--col-primary-dark);
+}
+
+.bg-med {
+  background: var(--col-neutral-bg-400);
+}
+
+.bg-light {
+  background: var(--col-neutral-bg-200);
+}
+
+.bg-white {
+  background: var(--col-neutral-light);
+}
+
+/* Base Styles - Mobile first approach */
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--ff-primary);
+  font-size: 1.125rem;
+  font-weight: var(--fw-regular);
+
+  color: var(--col-neutral-text);
+  background-color: var(--col-neutral-bg-200);
+
+  overflow-x: hidden;
+}
+
+/* Text */
+h1,
+h2,
+h3 {
+  font-weight: var(--fw-light);
+  color: var(--col-primary-dark);
+}
+
+p,
+.nav-desktop > a {
+  color: var(--col-neutral-text);
+}
+
+.nav-mobile > a {
+  color: var(--col-primary-dark);
+}
+
+.footer__links a {
+  color: var(--col-neutral-light);
+}
+
+.footer__cta p {
+  color: hsl(0, 0%, 100%, 0.5);
+}
+
+/* CTA Button */
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  text-transform: capitalize;
+  background: linear-gradient(135deg, #33d35e, #2ab6d9);
+  color: var(--col-neutral-light);
+  padding: 1em 2.125em;
+  border-radius: 2em;
+
+  font-size: 0.875rem;
+  font-weight: var(--fw-bold);
+}
+
+/* Hamburger Button */
+.burger-btn {
+  border: none;
+  background: none;
+}
+.burger-btn > span {
+  display: block;
+  background: var(--col-primary-dark);
+  width: 1.5em;
+  height: 0.0625em;
+}
+
+.burger-btn > span:not(:last-of-type) {
+  margin-bottom: 0.25em;
+}
