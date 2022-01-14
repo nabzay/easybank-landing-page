@@ -11,9 +11,10 @@
   <title>Frontend Mentor | Easybank landing page</title>
 
 </head>
-<body>
+<body class="body">
 
   <header class="header bg-white">
+    <div id="overlay" class="header__overlay hide"></div>
     <div class="header__container">
 
       <a href="/" class="header__logo">
@@ -36,7 +37,7 @@
         </svg>
       </a>
   
-        <nav class="nav-desktop hide-mobile">
+        <nav class="nav-desktop">
             <a class="nav-link" href="">Home</a>
             <a class="nav-link" href="">About</a>
             <a class="nav-link" href="">Contact</a>
@@ -44,13 +45,13 @@
             <a class="nav-link" href="">Careers</a>
         </nav>
   
-        <button id="burgetBtn" class="burger-btn hide-desktop" type="button">
+        <button id="burgerBtn" class="burger-btn" type="button">
           <span></span>
           <span></span>
           <span></span>
         </button>
 
-        <nav class="nav-mobile hide-desktop">
+        <nav id="navMobile" class="nav-mobile bg-white hide">
           <a class="nav-link" href="">Home</a>
           <a class="nav-link" href="">About</a>
           <a class="nav-link" href="">Contact</a>
@@ -74,13 +75,13 @@
         <img src="./images/image-mockups.png" alt="banner mockups">
       </div>
 
-      <div class>
+      <div class="banner__content">
         <h1>Next generation digital banking</h1>
         
         <p>Take your financial life online. Your Easybank account will be a one-stop-shop 
           for spending, saving, budgeting, investing, and much more.</p>
 
-          <a class="btn" href="">Request Invite</a>
+          <a class="btn banner__btn" href="">Request Invite</a>
 
       </div>
 
@@ -92,7 +93,7 @@
       <p>We leverage Open Banking to turn your bank account into your financial hub. Control your finances like never before.</p>
 
 
-      <div class="container">
+      <div class="testimonial__features">
 
         <div>
           <div>
@@ -280,6 +281,9 @@
     </div>
 
   </footer>
+
+  <script src="./app/script.js"></script>
+
 
 </body>
 </html>
