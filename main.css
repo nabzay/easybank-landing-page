@@ -143,6 +143,21 @@ p,
 
   font-size: 0.875rem;
   font-weight: var(--fw-bold);
+  position: relative;
+}
+
+.cta-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--col-neutral-light);
+  border-radius: 1.57em;
+  opacity: 0;
+  transition: 150ms ease-in-out;
+}
+
+.cta-btn:hover::before {
+  opacity: 0.4;
 }
 
 /* Hamburger Button */
