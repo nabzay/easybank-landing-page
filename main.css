@@ -412,13 +412,41 @@ p,
   line-height: 1.38;
   letter-spacing: -0.2px;
 }
+/* Tablet Styles */
+@media screen and (min-width: 35.3em) {
+  .articles .articles__container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 2.22em;
+  }
+
+  .article__card {
+    flex: 0 1 calc(50% - 1em);
+  }
+
+  .testimonial .testimonial__features {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 3.22em;
+  }
+
+  .feature__item {
+    flex: 0 1 calc(50% - 1em);
+  }
+}
 
 /* Footer Styles */
 .footer {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
   padding: 2.22em 4.28em;
+}
+
+.brand-container .brand-logo {
+  text-align: center;
 }
 
 .footer .socials {
@@ -426,7 +454,8 @@ p,
   margin-top: 1.78em;
   margin-bottom: 1.78em;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  min-width: 10.22em;
 }
 
 .footer__icons :hover {
