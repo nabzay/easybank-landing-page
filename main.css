@@ -121,7 +121,6 @@ h2 {
   font-size: 2rem;
   line-height: 1.16;
   letter-spacing: -0.57px;
-  text-align: center;
 }
 
 h3 {
@@ -225,6 +224,8 @@ p,
   position: relative;
   width: 100%;
   z-index: 2;
+  display: flex;
+  justify-content: center;
 }
 
 .header__container {
@@ -234,7 +235,7 @@ p,
   width: 100%;
   height: 100%;
   max-width: 69.4375rem;
-  margin: 0 auto;
+  align-items: center;
   padding: 1.22em 1.33em;
   position: relative;
 
@@ -245,7 +246,7 @@ p,
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.78em 0 0.44em 0;
+  padding-top: 1.78em;
   position: absolute;
   top: 6.25rem;
   border-radius: 0.3125rem;
@@ -280,10 +281,7 @@ p,
 .header__overlay {
   opacity: 1;
   position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
   background-image: linear-gradient(#2d314d, transparent);
 }
 
@@ -375,6 +373,10 @@ p,
   margin-top: 1.78em;
 }
 
+.articles > h2 {
+  text-align: center;
+}
+
 .article__card {
   border-radius: 0.3125rem;
   overflow: hidden;
@@ -415,8 +417,8 @@ p,
   line-height: 1.38;
   letter-spacing: -0.2px;
 }
-/* Tablet Styles */
-@media screen and (min-width: 35.3em) {
+/* Small tablet styles */
+@media screen and (min-width: 39em) {
   .articles .articles__container {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -424,8 +426,21 @@ p,
     margin-top: 2.22em;
   }
 
+  .articles > h2 {
+    text-align: left;
+  }
+
+  .articles {
+    padding: 4em;
+  }
+
   .article__card {
     flex: 0 1 calc(50% - 1em);
+  }
+
+  .testimonial {
+    text-align: left;
+    padding: 4em;
   }
 
   .testimonial .testimonial__features {
@@ -490,4 +505,51 @@ p,
   font-size: 0.9375rem;
   line-height: 2.36;
   letter-spacing: -0.23px;
+}
+
+/* Desktop Styles - Header & Nav */
+@media screen and (min-width: 57em) {
+  .burger-btn,
+  .nav-mobile,
+  .header__overlay {
+    display: none;
+  }
+  .nav-desktop {
+    display: flex;
+    align-items: center;
+    min-width: 18.3em;
+    justify-content: space-between;
+  }
+
+  .nav-desktop > a {
+    font-size: 0.875rem;
+    letter-spacing: -0.11px;
+    position: relative;
+    transition: color 300ms ease-in-out;
+  }
+
+  .nav-desktop > a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 0.22em;
+    left: 0;
+    right: 0;
+    bottom: -36px;
+    background: linear-gradient(135deg, #33d35e, #2ab6d9);
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+
+  .nav-desktop > a:hover {
+    color: var(--col-primary-dark);
+  }
+
+  .nav-desktop > a:hover::before {
+    opacity: 1;
+  }
+
+  .cta-btn {
+    display: inline-block;
+  }
 }
