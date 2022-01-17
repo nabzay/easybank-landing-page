@@ -514,6 +514,10 @@ p,
   .header__overlay {
     display: none;
   }
+
+  .header__container {
+    padding: 1em 1.33em;
+  }
   .nav-desktop {
     display: flex;
     align-items: center;
@@ -535,7 +539,7 @@ p,
     height: 0.22em;
     left: 0;
     right: 0;
-    bottom: -36px;
+    bottom: -32px;
     background: linear-gradient(135deg, #33d35e, #2ab6d9);
     opacity: 0;
     transition: opacity 300ms ease-in-out;
@@ -551,5 +555,40 @@ p,
 
   .cta-btn {
     display: inline-block;
+  }
+
+  /* Intro */
+  .banner {
+    height: 36.4em;
+    flex-direction: row-reverse;
+    padding-bottom: 0;
+    background-image: url(./images/bg-intro-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top -15em right -23.9em;
+    position: relative;
+    overflow-y: visible;
+    align-items: center;
+  }
+
+  .banner .banner__content {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    max-width: 24.72em;
+    left: 0;
+    text-align: left;
+    margin-left: 9.17em;
+  }
+
+  .banner .image-container {
+    height: auto;
+  }
+
+  .image-container img {
+    width: auto;
+    max-width: 40.67em;
+    padding: 0;
+    bottom: auto;
+    left: -605px;
   }
 }
