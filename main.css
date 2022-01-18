@@ -381,6 +381,7 @@ p,
   border-radius: 0.3125rem;
   overflow: hidden;
   margin-bottom: 1.33em;
+  height: 100%;
 }
 
 .article-img {
@@ -472,7 +473,7 @@ p,
   margin-top: 1.78em;
   margin-bottom: 1.78em;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   min-width: 10.22em;
 }
 
@@ -507,8 +508,55 @@ p,
   letter-spacing: -0.23px;
 }
 
-/* Desktop Styles - Header & Nav */
-@media screen and (min-width: 57em) {
+/* Smaller Desktops + Larger Tablets*/
+@media only screen and (min-width: 64em) {
+  .footer {
+    flex-direction: row;
+    padding: auto 165px;
+    height: 10.61em;
+  }
+
+  .footer .brand-container {
+    flex: 1;
+    margin-right: 7.33em;
+  }
+
+  .brand-container .brand-logo {
+    text-align: left;
+    margin-bottom: 2.78em;
+  }
+
+  .footer__links {
+    margin: 0;
+    flex: 2;
+    gap: 1rem;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .footer__links > li {
+    margin: 0;
+    text-align: left;
+  }
+
+  .brand-container .socials {
+    margin: 0;
+    justify-content: start;
+    gap: 0.833125rem;
+  }
+
+  .footer__cta {
+    text-align: right;
+    flex: 2;
+  }
+
+  .footer__cta p {
+    margin-top: 1.33em;
+  }
+
+  /* Header */
+
   .burger-btn,
   .nav-mobile,
   .header__overlay {
@@ -536,7 +584,7 @@ p,
     content: "";
     display: block;
     position: absolute;
-    height: 0.22em;
+    height: 0.29em;
     left: 0;
     right: 0;
     bottom: -32px;
@@ -555,40 +603,5 @@ p,
 
   .cta-btn {
     display: inline-block;
-  }
-
-  /* Intro */
-  .banner {
-    height: 36.4em;
-    flex-direction: row-reverse;
-    padding-bottom: 0;
-    background-image: url(./images/bg-intro-desktop.svg);
-    background-repeat: no-repeat;
-    background-position: top -15em right -23.9em;
-    position: relative;
-    overflow-y: visible;
-    align-items: center;
-  }
-
-  .banner .banner__content {
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    max-width: 24.72em;
-    left: 0;
-    text-align: left;
-    margin-left: 9.17em;
-  }
-
-  .banner .image-container {
-    height: auto;
-  }
-
-  .image-container img {
-    width: auto;
-    max-width: 40.67em;
-    padding: 0;
-    bottom: auto;
-    left: -605px;
   }
 }
