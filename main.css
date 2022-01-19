@@ -420,6 +420,13 @@ p,
 
 /* Small tablet styles */
 @media screen and (min-width: 39em) {
+  .header__container {
+    padding: 1.22em 4em;
+  }
+  .banner__content {
+    margin-top: 3em;
+    padding: 0 4em;
+  }
   /* Articles */
   .articles .articles__container {
     grid-template-columns: repeat(2, 1fr);
@@ -453,8 +460,8 @@ p,
   }
 }
 
-/* Footer Styles */
-.footer {
+/* Footer Styles - Mobile + Small tablets */
+.footer .footer__container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -465,7 +472,7 @@ p,
   text-align: center;
 }
 
-.footer .socials {
+.footer__container .socials {
   display: flex;
   margin-top: 1.78em;
   margin-bottom: 1.78em;
@@ -507,6 +514,26 @@ p,
 
 /* Smaller Desktops + Larger Tablets*/
 @media only screen and (min-width: 64em) {
+  .banner__content h1 {
+    font-size: 3.5rem;
+    letter-spacing: -1px;
+  }
+
+  .banner__content {
+    text-align: left;
+  }
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: -0.71px;
+  }
+
+  .banner__content p {
+    font-size: 1.125rem;
+    letter-spacing: -0.28px;
+    margin-top: 1.33em;
+    margin-bottom: 2em;
+  }
+
   .articles .articles__container {
     display: flex;
     margin-top: 2.22em;
@@ -514,8 +541,6 @@ p,
 
   .articles__container .article__card {
     flex: 1;
-
-    align-self: normal;
   }
 
   .articles > h2 {
@@ -523,23 +548,42 @@ p,
   }
 
   .articles {
-    padding: 4em;
+    padding: 4.44em 9.17em;
   }
 
   /* Testimonial */
-  .testimonial .testimonial__features {
-    /* gap: 1.67em; */
+
+  .testimonial {
+    padding: 5.3em 9.17em;
   }
 
   .feature__item {
     flex: 1;
   }
 
+  .testimonial > p {
+    font-size: 1.125rem;
+    letter-spacing: -0.28px;
+    margin-bottom: 4em;
+  }
+
+  .testimonial h3 {
+    font-size: 1.5rem;
+    letter-spacing: -0.43px;
+    margin-top: 1.67em;
+  }
+
+  .feature__item__text {
+    font-size: 1rem;
+    letter-spacing: -0.25px;
+  }
+
   /* Footer */
-  .footer {
+  .footer .footer__container {
     flex-direction: row;
-    padding: auto 9.17em;
     height: 10.61em;
+    max-width: 61.67em;
+    margin: 0 auto;
   }
 
   .footer .brand-container {
@@ -590,7 +634,7 @@ p,
   }
 
   .header__container {
-    padding: 1em 4.28em;
+    padding: 1em 9.17em;
   }
   .nav-desktop {
     display: flex;
@@ -629,5 +673,39 @@ p,
 
   .cta-btn {
     display: inline-block;
+  }
+
+  /* Banner */
+
+  .banner {
+    flex-direction: row-reverse;
+    padding: 0;
+    align-items: center;
+  }
+
+  .banner .image-container {
+    flex: 55%;
+    background-image: var(--bg-img-desktop);
+
+    height: 36.1em;
+    background-size: 150%;
+    background-position: 7% 76%;
+  }
+
+  .banner .banner__content {
+    flex: 45%;
+    padding: 0 0.8em 0 9.17em;
+    margin: 0;
+  }
+
+  .banner__content > p {
+    padding-right: 2em;
+  }
+
+  .banner .image-container img {
+    padding: 0;
+    max-width: 40.67em;
+    bottom: auto;
+    left: 23.5%;
   }
 }
