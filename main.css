@@ -224,12 +224,10 @@ p,
   position: relative;
   width: 100%;
   z-index: 2;
-  display: flex;
-  justify-content: center;
-  padding: 1.22em 1.33em;
 }
 
 .header__container {
+  padding: 1.22em 1.33em;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -429,7 +427,7 @@ p,
 
 /* Small tablet styles */
 @media screen and (min-width: 39em) {
-  .header {
+  .header__container {
     padding: 1.22em 4.28em;
   }
 
@@ -675,8 +673,14 @@ p,
     display: none;
   }
 
+  .header {
+    padding: 1.22em 4.28em;
+  }
+
   .header__container {
     max-width: 61.67em;
+    margin: 0 auto;
+    padding: 0;
   }
   .nav-desktop {
     display: flex;
