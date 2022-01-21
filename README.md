@@ -1,20 +1,22 @@
-# Frontend Mentor - Easybank landing page solution
+# Easybank landing page
 
-This is a solution to the [Easybank landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN).
+Easybank is a digital banking application that gives users insight into their daily finances.
+
+## Screenshot
 
 ![](./images/screenshot.png)
 
+This is a solution to the [Easybank landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN).
+
 ## Overview
 
-### The challenge
-
-To build a fully responsive landing page using semantic HTML5 & CSS3 for Easybank.
+Building a fully responsive landing page using semantic HTML5, CSS3 and Vanilla JS.
 
 ### Links
 
 - Live Site URL: [Link](https://nabzay.github.io/easybank-landing-page)
 
-## My process
+## Process
 
 ### Built with
 
@@ -22,6 +24,7 @@ To build a fully responsive landing page using semantic HTML5 & CSS3 for Easyban
 - CSS custom properties
 - Flex
 - CSS Grid
+- Pseudo elements
 - Mobile-first workflow
 - Basic animations
 - Vanilla JS
