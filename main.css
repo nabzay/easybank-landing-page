@@ -281,7 +281,6 @@ p,
 }
 
 .hide {
-  /* IMPORTANT: Doesnt allow screenreaders to access them */
   display: none;
 }
 
